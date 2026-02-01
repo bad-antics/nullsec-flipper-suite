@@ -166,3 +166,10 @@ MIT License - See [LICENSE](LICENSE) for details.
   <b>Made with 💀 by NullSec</b><br>
   <i>"In a world of scripts, be a hacker."</i>
 </p>
+
+## Changelog
+
+- Added to awesome-flipperzero list
+- Submitted to UberGuidoZ/Flipper collection
+- Cross-platform support verified
+
