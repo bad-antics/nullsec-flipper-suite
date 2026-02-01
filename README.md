@@ -173,3 +173,6 @@ MIT License - See [LICENSE](LICENSE) for details.
 - Submitted to UberGuidoZ/Flipper collection
 - Cross-platform support verified
 
+
+### Contributors
+Thanks to all contributors!
